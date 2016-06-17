@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  jupyter:
+    container_name: course-xgboost
+    image: parrotprediction/course-xgboost
+    working_dir: /notebooks
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks/:/notebooks
