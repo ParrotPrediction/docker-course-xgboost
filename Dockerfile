@@ -19,6 +19,7 @@ RUN conda install --quiet --yes \
 	'pandas=0.17*' \
 	'matplotlib=1.5*' \
 	'seaborn=0.7*' \
+	'graphviz=2.38.*' \
 	'scikit-learn=0.17*'
 
 # Add shortcuts to distinguish pip for python2 and python3 envs
