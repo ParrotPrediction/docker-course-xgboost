@@ -8,7 +8,7 @@ USER root
 
 # libav-tools for matplotlib anim
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends libav-tools && \
+    apt-get install -y --no-install-recommends libav-tools git && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
@@ -27,4 +27,7 @@ RUN ln -s $CONDA_DIR/envs/python2/bin/pip $CONDA_DIR/bin/pip2 && \
     ln -s $CONDA_DIR/bin/pip $CONDA_DIR/bin/pip3
 
 # Install XGBoost library
-RUN pip3 install xgboost
+RUN git clone --recursive https://github.com/dmlc/xgboost && \
+    cd xgboost && \
+    make -j4 && \
+    cd python-package; python setup.py install
