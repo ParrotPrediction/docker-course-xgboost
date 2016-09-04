@@ -13,6 +13,8 @@ The following container comes with pre-installed tools required to complete the 
 - Matplotlib
 - Seaborn
 
+[![](https://images.microbadger.com/badges/image/parrotprediction/course-xgboost.svg)](https://microbadger.com/images/parrotprediction/course-xgboost "Get your own image badge on microbadger.com")
+
 ### Requirements
 To successfully spin up container please make sure that `Docker Engine` and `Docker Compose` are properly installed. If you have troubles please refer to [Docker homepage](https://www.docker.com/).
 
